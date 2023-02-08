@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+    </script>
+    <style>
+        @media screen and (min-width:450px){
+            
+      
+        body{
+            padding: 10px 150px 0px 150px;
+        }
+        #prplbg{
+            background-color: purple;
+            background-image: linear-gradient(to bottom right ,rgb(37, 6, 37), rgb(60, 13, 13), rgb(48, 9, 48));
+            height: 550px;
+            width: 33%;
+            float: left;
+
+        }
+
+        #whtbg{
+            background-color: antiquewhite;
+            height: 550px;
+            width: 65%;
+            float: left;
+            text-align: center;
+
+        }
+        #crdprpl{
+            background-color: rgb(70, 52, 186);
+            background-image: linear-gradient(to bottom right , rgb(70, 52, 186), rgb(70, 52, 186), rgba(93, 20, 144, 0.983), rgba(93, 20, 144, 0.983), rgb(0, 184, 187),purple, purple);
+            width: 280px;
+            height: 130px;
+            float: left;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            top: 100px;
+            left: 250px;
+        }
+        #crdwht{
+            background-color: pink;
+            width: 320px;
+            height: 170px;
+            float: left;
+            border-radius: 10px;
+            text-align: center;
+            position: fixed;
+            top: 300px;
+            left: 350px;
+        }
+        #frm{
+            width: 500px;
+            margin: 150px 100px 150px 150px;
+            
+        }
+        label{
+            font-size: 10px;
+            font-weight: 900;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input{
+            width: 250px;
+            padding: 5px;
+        }
+        button{
+            width: 265px;
+            padding: 5px;
+            background-color: rgb(49, 28, 87);
+            color: white;
+            border: 1px solid rgb(49, 28, 87);
+        }
+        #whtcrcl{
+            background-color: white;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+          
+        }
+
+        #rdcrcl{
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 10px;
+            height: 10px;
+        }
+        #gtnum{
+            font-size: 30px;
+            letter-spacing: 6px;
+        }
+        #gtname{
+            float: left;
+        }
+        #gtdt{
+            float: right;
+        }
+        #gryln{
+            background-color: rgb(35, 33, 33);
+            height: 30px;
+        }
+        #gryinpt{
+            background-color: grey;
+            border: 1px solid grey;
+            text-align: right;
+            font-size: 10px; color: white;
+            padding: 10px; 
+        }
+        #whttxt{
+            font-size: 7px;
+        }
+      
+    }
+    
+    
+    @media screen and (max-width:450px) {
+        #prplbg{
+            background-color: purple;
+            background-image: linear-gradient(to bottom right ,rgb(37, 6, 37), rgb(60, 13, 13), rgb(48, 9, 48));
+            height: 200px;
+            width: 100%;
+            float: left;
+
+        }
+
+        #whtbg{
+            background-color: rgb(197, 119, 16);
+            height: auto;
+            width: 100%;
+            float: left;
+            text-align: center;
+            padding: 10px;
+
+        }
+
+        #crdprpl{
+            background-color: rgb(70, 52, 186);
+            background-image: linear-gradient(to bottom right , rgb(70, 52, 186), rgb(70, 52, 186), rgba(93, 20, 144, 0.983), rgba(93, 20, 144, 0.983), rgb(0, 184, 187),purple, purple);
+            width: 190px;
+            height: 80px;
+            float: left;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            position: fixed;
+            top: 110px;
+            left: 30px;
+        }
+        #whtcrcl{
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+          
+        }
+
+        #rdcrcl{
+            border: 1px solid white;
+            border-radius: 10px;
+            width: 10px;
+            height: 10px;
+        }
+        #crdwht{
+            background-color: pink;
+            width: 220px;
+            height: 110px;
+            float: left;
+            border-radius: 10px;
+            text-align: center;
+            position: fixed;
+            top: 35px;
+            left: 80px;
+        }
+        #gtnum{
+            font-size: 15px;
+            letter-spacing: 6px;
+        }
+        #gtname{
+            float: left;
+            line-height: 1px;
+        }
+        #gtdt{
+            float: right;
+            line-height: 1px;
+        }
+        #gryln{
+            background-color: rgb(35, 33, 33);
+            height: 30px;
+        }
+        #gryinpt{
+            background-color: grey;
+            border: 1px solid grey;
+            text-align: right;
+            font-size: 10px; color: white;
+            padding: 7px 10px 7px 10px;
+            width: 150px;
+
+            
+        }
+        #whttxt{
+            font-size: 7px;
+        }
+        #frm{
+            width: 300px;
+            margin-top: 30px;
+            
+        }
+        label{
+            font-size: 7px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+        input{
+            width: 270px;
+            padding: 5px;
+        }
+        button{
+            width: 295px;
+            padding: 5px;
+            background-color: rgb(49, 28, 87);
+            color: white;
+            border: 1px solid rgb(49, 28, 87);
+        }
+        
+        
+        
+       
+
+    }
+        
+
+    </style>
+</head>
+<body ng-app="" >
+    <div id="prplbg"></div>
+    <div id="whtbg">
+        <div id="frm">
+        <label>CARDHOLDER NAME</label><br>
+        <input type="text"  ng-model="CardName" name="CARDHOLDER NAME" id="name" placeholder="e.g. Jane Applessed"><br>
+        <label>CARD HOLDER</label><br>
+        <input type="number"  ng-model="CardNum" name="CARD HOLDER" id="number" placeholder="1234 5678 9123 0000"><br>
+        <label> EXP. DATE (MM/YY)</label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <label>CVC</label><br>
+        <input type="month"  ng-model="date" id="date" placeholder="MM" style="width: 100px;">&nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="number"  ng-model="cvc" placeholder="e.g. 123" style="width: 105px;"><br><br>
+        <button onclick="btn()">Confirm</button>
+        </div>
+    </div>
+    <div id="crdwht">
+        <p id="gryln"></p>
+        <input id="gryinpt" ng-init="cvc" type="number" value="000"><br><br>
+        <p id="whttxt">repellat consectetur porro ducimus illo alias ut! <br>
+            Lorem ipsum sit amet elit. adipisicing<br>
+            repellat porro ducimus illo consectetur alias ut
+        </p>
+
+    </div>
+    <div id="crdprpl">
+        <div id="whtcrcl"></div>
+        <div id="rdcrcl"></div><br>
+        <div id="gtnum" ng-init="CardNum='0000 0000 0000'">{{CardNum}}</div><br>
+        <div id="gtname" ng-init="CardName='John'">{{CardName}}</div>
+        <div id="gtdt" ng-init="date='08/21'">{{date}}</div>
+    </div>
+    
+    
+
+ 
+    
+    
+        
+    
+    <!-- <script>
+         function btn()
+         {
+            var a = document.getElementById("name").value;
+            var b = document.getElementById("number").value;
+            var c = document.getElementById("date").value;
+
+            document.getElementById("gtnum").innerHTML = b;
+            document.getElementById("gtname").innerHTML = a;
+            document.getElementById("gtdt").innerHTML = c;
+         }
+    </script> -->
+    
+    
+
+
+</body>
+</html>
